@@ -1,0 +1,50 @@
+Q:1:
+How would you design and implement content-based and collaborative filtering recommendation algorithms? 
+What databases would you use for efficient storage and querying of user preferences and movie metadata? 
+-------------
+
+For content-based filtering:
+Design: Create a model to represent movie metadata ( genres, actors, directors).
+Implementation: Calculate similarities between movies based on metadata attributes.
+Database: Use a NoSQL database like MongoDB for storing movie metadata efficiently.
+
+For collaborative filtering:
+Design: Create models for user preferences (ratings, likes, etc.) and movie interactions.
+Implementation: Recommend movies based on user-item interactions or similarity between users.
+Database: Use a relational database like PostgreSQL for storing user preferences and movie interactions 
+for efficient querying.
+
+*************
+2 - How would you optimize database performance for a social networking platform
+ using Postgres, Neo4j, and Qdrant for structured, graph-based, and similarity search data?
+--------------
+
+To optimize database performance for a social networking platform using:
+	->Postgres (Structured Data):
+		Normalize schema and index frequently queried columns.
+		Partition large tables and use connection pooling.
+		Regularly vacuum and analyze tables for optimization.
+	->Neo4j (Graph Data):
+		Define node properties, create indexes, and optimize Cypher queries.
+		Tune memory allocation and caching settings.
+	->Qdrant (Similarity Search Data):
+		Define vector representations and configure indexing strategies.
+		Use nearest neighbor algorithms and optimize search queries.
+
+**************
+3-Describe using Celery for asynchronous task processing in a Django application,
+ ensuring reliability and fault tolerance, especially for tasks that may fail or need to be retried.
+---------
+
+->Install Celery using command : pip install Celery and configure it in Django settings with a message broker Redis.
+->Define tasks in Django by creating decorated functions with @task or @shared_task.
+->Handle task failures by setting retry mechanisms, timeouts, and max retries using Celery settings.
+->Implement error handling in tasks to catch exceptions and handle retries or failure scenarios.
+->Utilize task result backends to track task status, results, and errors for monitoring and debugging.
+->Monitor Celery workers using tools like Flower for real-time monitoring and management.
+->Ensure idempotent task design to handle retries without causing side effects or duplications.
+->Implement task acknowledgment to ensure that tasks are processed and completed reliably.
+->Configure Celery beat for periodic tasks scheduling if needed.
+->Test task retries and failures scenarios to validate fault tolerance mechanisms.
+
+**************

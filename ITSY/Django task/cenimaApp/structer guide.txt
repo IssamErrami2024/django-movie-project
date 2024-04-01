@@ -1,0 +1,26 @@
+cenimaApp/
+├── __pycache__ /
+├── __init__.py
+├── docker-compose.yml
+├── asgi.py
+├── urls.py
+├── wsgi
+├── settings.py
+├── movies/
+│   ├── models.py
+│   ├── schemas.py
+│   └── views.py
+│   └── tasks.py
+│   ├── api.py
+│   └── settings.py 
+│   ├── serializers.py
+│   └── celery.py
+│   ├── urls.py
+│   └── views.py
+├── tests/
+│   ├── test_models.py
+│   ├── test_schemas.py
+│   ├── test_views.py
+│   └── test_tasks.py
+├── models.py
+├── readme answers.txt
